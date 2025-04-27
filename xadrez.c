@@ -88,39 +88,12 @@ int main() {
 
         case 3:
         printf("A opção escolhida foi Rainha, Escolha para onde ela deve andar:\n");
-    printf(" 1. Para Cima\n");
-    printf(" 2. Para Baixo\n");
-    printf(" 3. Para Esquerda\n");
-    printf(" 4. Para Direita\n");
-    scanf("%s", &Rainha);
-
-    switch (expression)
-    {
-    case 1;
-            for (contador2 = 1; contador2 <= 8; contador2++) {
-                printf("A Rainha se moveu para %s\n", Rainha);
-            }
-            break;
-            case 2:
-            for (contador2 = 1; contador2 <= 8; contador2++) {
-                printf("A Rainha se moveu para Baixo\n");
-            }
-            break;
-        case 3:
-            for (contador2 = 1; contador2 <= 8; contador2++) {
-                printf("A Rainha se moveu para Esquerda\n");
-            }
-            break;
-        case 4:
-            for (contador2 = 1; contador2 <= 8; contador2++) {
-                printf("A Rainha se moveu para Direita\n");
-            }
-            break;
-
-        default:
-            printf("Movimento inválida.\n");
-            break;
-    }
+        scanf("%s", &Rainha);
+        
+        for (contador2 = 1; contador2 <= 8; contador2++)
+{
+    printf("A Rainha se moveu para %s\n", Rainha);
+}
             break;
 
     case 4:
