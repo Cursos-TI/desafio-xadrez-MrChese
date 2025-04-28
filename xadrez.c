@@ -88,6 +88,8 @@ int main() {
 
         case 3:
         printf("A opção escolhida foi Rainha, Escolha para onde ela deve andar:\n");
+        printf("Você pode escolher ate 2 movimentos\n");
+        printf("Exemplo: Cima,Baixo\n");
         scanf("%s", &Rainha);
         
         for (contador2 = 1; contador2 <= 8; contador2++)
