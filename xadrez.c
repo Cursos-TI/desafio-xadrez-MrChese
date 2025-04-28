@@ -1,9 +1,28 @@
 #include <stdio.h>
 
+void torreCima() {
+    printf("A Torre se  moveu para cima: \n");
+}
+
+void torreBaixo() {
+    printf("A Torre se  moveu para baixo: \n");
+}
+
+void torreEsquerda() {
+    printf("A Torre se moveu para esquerda: \n");
+}
+
+void torreDireita() {
+    printf("A TOrre se moveu para direita: \n");
+}
+
+
+
 int main() {
     int resultado, movimento;
     int contador = 0, contador2 = 1;
     char Rainha[20];
+
 
     printf("Seja Bem-Vindo ao Jogo De Xadrez! Para iniciar, escolha uma das peças:\n");
     printf("1. Torre\n");
@@ -24,16 +43,16 @@ int main() {
             while (contador < 5) {
                 switch (movimento) {
                     case 1:
-                        printf("A Torre se moveu para Cima\n", contador + 1);
+                        torreCima();
                         break;
                     case 2:
-                        printf("A Torre se moveu para Baixo\n", contador + 1);  
+                        torreBaixo();
                         break;
                     case 3:
-                        printf("A torre se moveu para Esquerda\n", contador + 1);
+                       torreEsquerda();
                         break;
                     case 4:
-                        printf("A Torre peça se moveu para Direita\n", contador + 1);
+                        torreDireita();
                         break;
                     default:
                         printf("Movimento inválido.\n");
@@ -45,7 +64,7 @@ int main() {
             break;
 
         case 2:
-        printf("A opção escolhida foi Torre, Escolha para onde ela deve andar:\n");
+        printf("A opção escolhida foi Bispo, Escolha para onde ela deve andar:\n");
             printf("1. Para Cima, Esquerda\n");
             printf("2. Para Cima, Direita\n");
             printf("3. Para Baixo, Esquerda\n");
@@ -55,28 +74,70 @@ int main() {
             switch (movimento)
             {
             case 1:
-             do {
-                printf("O bispo se moveu para Cima, Esquerda\n", contador2);
+            do {
+                int contadorInterno = 0;
+                
+                do {
+                    if (contadorInterno == 0) {
+                        printf("O Bispo se moveu para Cima\n");
+                    } else if (contadorInterno == 1) {
+                        printf("O Bispo se moveu para Esquerda\n");
+                    }
+                    contadorInterno++;
+                } while (contadorInterno < 2);
+        
                 contador2++;
-            } while (contador2 <= 5);
+            } while (contador2 < 6);
                 break;
             case 2:
+            do {
+                int contadorInterno = 0;
+                
                 do {
-                printf("O bispo se moveu para Cima, Direita\n", contador2);
+                    if (contadorInterno == 0) {
+                        printf("O Bispo se moveu para Cima\n");
+                    } else if (contadorInterno == 1) {
+                        printf("O Bispo se moveu para Direita\n");
+                    }
+                    contadorInterno++;
+                } while (contadorInterno < 2);
+        
                 contador2++;
-            } while (contador2 <= 5);
+            } while (contador2 < 6);
                 break;
+
             case 3:
+            do {
+                int contadorInterno = 0;
+                
                 do {
-                printf("O bispo se moveu para Baixo, Esquerda\n", contador2);
+                    if (contadorInterno == 0) {
+                        printf("O Bispo se moveu para Baixo\n");
+                    } else if (contadorInterno == 1) {
+                        printf("O Bispo se moveu para Esquerda\n");
+                    }
+                    contadorInterno++;
+                } while (contadorInterno < 2);
+        
                 contador2++;
-            } while (contador2 <= 5);
+            } while (contador2 < 6);
                 break;
+                
             case 4:
+            do {
+                int contadorInterno = 0;
+                
                 do {
-                printf("O bispo se moveu para Baixo, Direita\n", contador2);
+                    if (contadorInterno == 0) {
+                        printf("O Bispo se moveu para Baixo\n");
+                    } else if (contadorInterno == 1) {
+                        printf("O Bispo se moveu para Direita\n");
+                    }
+                    contadorInterno++;
+                } while (contadorInterno < 2);
+        
                 contador2++;
-            } while (contador2 <= 5);
+            } while (contador2 < 6);
                 break;
             
             default:
@@ -107,32 +168,32 @@ int main() {
     scanf("%d", &movimento);
     switch (movimento) {
         case 1:
-        for (contador = 0; contador2 <= 1; contador++) {
-            for (contador2 = 1; contador2 <= 2; contador2++) {
+        for (contador = 0, contador2 = 2; contador < contador2; contador++, contador2--) {
+            for (int i = 0; i < 2; i++) {
                 printf("O Cavalo se moveu para Cima\n");
             }
             printf("O Cavalo se moveu para Direita\n");
         }
-         break;
+        break;
         case 2:
-        for (contador = 0; contador2 <= 1; contador++) {
-            for (contador2 = 1; contador2 <= 2; contador2++) {
+        for (contador = 0, contador2 = 2; contador < contador2; contador++, contador2--) {
+            for (int i = 0; i < 2; i++) {
                 printf("O Cavalo se moveu para Cima\n");
             }
             printf("O Cavalo se moveu para Esquerda\n");
         }
         break;
-        case 3: 
-        for (contador = 0; contador2 <= 1; contador++) {
-            for (contador2 = 1; contador2 <= 2; contador2++) {
+        case 3:
+        for (contador = 0, contador2 = 2; contador < contador2; contador++, contador2--) {
+            for (int i = 0; i < 2; i++) {
                 printf("O Cavalo se moveu para Baixo\n");
             }
             printf("O Cavalo se moveu para Direita\n");
         }
         break;
         case 4:
-        for (contador = 0; contador2 <= 1; contador++) {
-            for (contador2 = 1; contador2 <= 2; contador2++) {
+        for (contador = 0, contador2 = 2; contador < contador2; contador++, contador2--) {
+            for (int i = 0; i < 2; i++) {
                 printf("O Cavalo se moveu para Baixo\n");
             }
             printf("O Cavalo se moveu para Esquerda\n");
